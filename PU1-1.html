@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio PU1-1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background-color: #55098f;
+            color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .header-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            font-size: 14px;
+        }
+        
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            /*color: #2c3e50;*/
+			color: #301934;
+            border-bottom: 3px solid #FFD700;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #301934;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding: 10px 0;
+            border-left: 4px solid #FFD700;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #301934;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        h4 {
+            color: #301934;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .objectives {
+            background-color: #fbeeff;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', Consolas, monospace;
+            font-size: 14px;
+        }
+        
+        code {
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', Consolas, monospace;
+        }
+        
+        .evaluation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+        
+        .evaluation-table th {
+            background-color: #301934;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #bdc3c7;
+        }
+        
+        .evaluation-table td {
+            padding: 10px 12px;
+            border: 1px solid #bdc3c7;
+        }
+
+		.evaluation-table td strong{
+			color: #301934;
+		}
+        
+        .evaluation-table tr:nth-child(even) {
+            background-color: #fbeeff;
+        }
+        
+        .deliverable-box {
+            background-color: #e8f6f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .requirement-box {
+            background-color: #fef9e7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .tech-box {
+            background-color: #edf2f7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #8e44ad;
+        }
+        
+        strong {
+            color: #2c3e50;
+        }
+
+		.header-info strong {
+            color: white;
+        }
+
+        
+        .folder-structure {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-family: 'Courier New', Consolas, monospace;
+            font-size: 14px;
+            white-space: pre-line;
+        }
+    </style>
+</head>
+<body>
+	<div class="header">
+        <h1 style="color: white; border-bottom: 3px solid white;">Universidad Politécnica de Yucatán</h1>
+        <div class="header-info">
+            <div><strong>Course:</strong> Visual Modeling Information</div>
+            <div><strong>Program:</strong> Data Engineering</div>
+            <div><strong>Date:</strong> Sept 5, 2025</div>
+            <div><strong>Portfolio:</strong> PU1-1</div>
+            <div><strong>Professor:</strong> Jorge J. Pedrozo Romero</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Comprehensive Practice: Data Analysis and Visualization</h1>
+        <h2>Data Engineering - 9th Semester</h2>
+
+        <section class="objectives">
+            <h3>Learning Objectives</h3>
+            <p>Upon completing this practice, students will be able to:</p>
+            <ul>
+                <li>Apply fundamental concepts of visual information modeling</li>
+                <li>Compare and contrast relational and NoSQL databases</li>
+                <li>Manipulate and transform data in CSV and JSON formats</li>
+                <li>Perform basic statistical analyses and communicate results effectively</li>
+                <li>Create a complete documented project for their professional portfolio</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Project Description</h2>
+            <p><strong>Central Theme</strong>: Video Streaming Platform Performance Analysis</p>
+            <p>Students will work with a synthetic dataset that simulates data from a streaming platform, including user information, content, viewing sessions, and performance metrics.</p>
+        </section>
+
+        <section>
+            <h2>Provided Datasets</h2>
+            
+            <h3>1. users.csv</h3>
+            <pre>user_id,age,country,subscription_type,registration_date,total_watch_time_hours
+U001,25,Mexico,Premium,2023-01-15,245.5
+U002,34,Colombia,Basic,2023-02-20,156.2
+U003,28,Argentina,Premium,2023-01-22,189.7
+U004,45,Chile,Basic,2023-03-01,98.3
+U005,32,Peru,Standard,2023-02-14,167.9</pre>
+
+            <h3>2. content.json</h3>
+            <pre>{
+  "movies": [
+    {
+      "content_id": "M001",
+      "title": "Data Adventures",
+      "genre": ["Action", "Sci-Fi"],
+      "duration_minutes": 120,
+      "release_year": 2023,
+      "rating": 4.2,
+      "views_count": 15420,
+      "production_budget": 50000000
+    },
+    {
+      "content_id": "M002",
+      "title": "Analytics Kingdom",
+      "genre": ["Fantasy", "Adventure"],
+      "duration_minutes": 98,
+      "release_year": 2024,
+      "rating": 4.5,
+      "views_count": 23150,
+      "production_budget": 35000000
+    }
+  ],
+  "series": [
+    {
+      "content_id": "S001", 
+      "title": "Analytics Chronicles",
+      "genre": ["Drama", "Technology"],
+      "seasons": 3,
+      "episodes_per_season": [10, 12, 8],
+      "avg_episode_duration": 45,
+      "rating": 4.7,
+      "total_views": 89650,
+      "production_budget": 120000000
+    },
+    {
+      "content_id": "S002",
+      "title": "Data Detectives",
+      "genre": ["Crime", "Mystery"],
+      "seasons": 2,
+      "episodes_per_season": [8, 10],
+      "avg_episode_duration": 52,
+      "rating": 4.3,
+      "total_views": 67420,
+      "production_budget": 85000000
+    }
+  ]
+}</pre>
+
+            <h3>3. viewing_sessions.csv</h3>
+            <pre>session_id,user_id,content_id,watch_date,watch_duration_minutes,completion_percentage,device_type,quality_level
+S001,U001,M001,2024-03-15,118,98.3,Smart TV,4K
+S002,U002,S001,2024-03-15,42,93.3,Mobile,HD
+S003,U003,M002,2024-03-16,95,96.9,Tablet,HD
+S004,U001,S002,2024-03-16,156,100.0,Smart TV,4K
+S005,U004,M001,2024-03-17,85,70.8,Mobile,SD</pre>
+        </section>
+
+        <div class="phase-section">
+            <h2>Phase 1: Database Design</h2>
+            
+            <h3>Activity 1.1: Relational Model</h3>
+            <div class="deliverable-box">
+                <h4>Deliverables:</h4>
+                <ul>
+                    <li>ER diagram of the relational database</li>
+                    <li>SQL scripts for table creation with proper constraints</li>
+                    <li>Complex SQL queries for analysis (minimum 5 with joins, subqueries, and aggregations)</li>
+                    <li>Normalization justification and optimization documentation</li>
+                </ul>
+            </div>
+
+            <div class="tech-box">
+                <p><strong>Suggested Technologies:</strong> PostgreSQL, MySQL, SQLite</p>
+            </div>
+
+            <div class="requirement-box">
+                <h4>Required Queries Examples:</h4>
+                <ol>
+                    <li>Top 5 most-watched content by country</li>
+                    <li>User retention analysis by subscription type</li>
+                    <li>Revenue analysis by content genre</li>
+                    <li>Seasonal viewing patterns</li>
+                    <li>Device preference correlation with completion rates</li>
+                </ol>
+            </div>
+
+            <h3>Activity 1.2: NoSQL Model</h3>
+            <div class="deliverable-box">
+                <h4>Deliverables:</h4>
+                <ul>
+                    <li>Collection/document design for MongoDB</li>
+                    <li>Data insertion scripts with proper indexing</li>
+                    <li>Aggregation pipelines (minimum 3 stages each)</li>
+                    <li>Performance comparison between relational and NoSQL approaches</li>
+                </ul>
+            </div>
+
+            <div class="tech-box">
+                <p><strong>Suggested Technologies:</strong> MongoDB, CouchDB, Firebase</p>
+            </div>
+
+            <div class="requirement-box">
+                <h4>Required Aggregations:</h4>
+                <ol>
+                    <li>User engagement metrics by demographics</li>
+                    <li>Content performance analytics</li>
+                    <li>Geographic distribution analysis</li>
+                    <li>Time-series viewing trends</li>
+                </ol>
+            </div>
+
+            <h4>Evaluation Criteria:</h4>
+            <ul>
+                <li>Correct normalization</li>
+                <li>Query optimization and indexing strategies</li>
+                <li>Technical justification for technology choice</li>
+                <li>Clear schema documentation</li>
+                <li>Performance benchmarking</li>
+            </ul>
+        </div>
+
+        <div class="phase-section">
+            <h2>Phase 2: Statistical Analysis</h2>
+            
+            <h3>Activity 2.1: Descriptive Statistics</h3>
+            <div class="deliverable-box">
+                <h4>Deliverables:</h4>
+                <ul>
+                    <li>Jupyter notebook with comprehensive exploratory data analysis</li>
+                    <li>Central tendency and dispersion measures calculation</li>
+                    <li>Outlier detection and pattern identification</li>
+                    <li>Distribution analysis of key variables</li>
+                    <li>Data quality assessment report</li>
+                </ul>
+            </div>
+
+            <h4>Key Metrics to Analyze:</h4>
+            <ul>
+                <li>User engagement distribution</li>
+                <li>Content popularity trends</li>
+                <li>Viewing completion rates</li>
+                <li>Device usage patterns</li>
+                <li>Geographic viewing preferences</li>
+            </ul>
+
+            <h3>Activity 2.2: Inferential Analysis</h3>
+            <div class="deliverable-box">
+                <h4>Deliverables:</h4>
+                <ul>
+                    <li>Hypothesis testing on user behavior patterns</li>
+                    <li>Correlation analysis between variables</li>
+                    <li>User segmentation using clustering algorithms</li>
+                    <li>Basic predictive modeling for user retention</li>
+                    <li>Statistical significance testing and interpretation</li>
+                </ul>
+            </div>
+
+            <div class="requirement-box">
+                <h4>Required Analyses:</h4>
+                <ol>
+                    <li><strong>Hypothesis Testing</strong>: Premium vs Basic user engagement</li>
+                    <li><strong>Correlation Analysis</strong>: Age, viewing time, and completion rates</li>
+                    <li><strong>Clustering</strong>: User behavior segmentation (K-means, hierarchical)</li>
+                    <li><strong>Regression</strong>: Predict user retention based on viewing patterns</li>
+                    <li><strong>Time Series</strong>: Seasonal viewing trends analysis</li>
+                </ol>
+            </div>
+
+            <div class="tech-box">
+                <h4>Suggested Tools:</h4>
+                <ul>
+                    <li><strong>Python</strong>: pandas, numpy, scipy, scikit-learn, matplotlib, seaborn</li>
+                    <li><strong>R</strong>: dplyr, ggplot2, tidyr, caret</li>
+                    <li><strong>Jupyter Notebooks</strong> or <strong>R Markdown</strong></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="phase-section">
+            <h2>Phase 3: Data Visualization</h2>
+            
+            <h3>Activity 3.1: Interactive Dashboards</h3>
+            <div class="deliverable-box">
+                <h4>Deliverables:</h4>
+                <ul>
+                    <li>Executive KPI dashboard with real-time metrics</li>
+                    <li>Interactive visualizations by user segments</li>
+                    <li>Temporal trend analysis with drill-down capabilities</li>
+                    <li>Geographic comparison dashboards</li>
+                    <li>Mobile-responsive design implementation</li>
+                </ul>
+            </div>
+
+            <div class="requirement-box">
+                <h4>Required Dashboard Components:</h4>
+                <ol>
+                    <li><strong>Executive Summary</strong>: Key metrics overview</li>
+                    <li><strong>User Analytics</strong>: Demographics and behavior</li>
+                    <li><strong>Content Performance</strong>: Popularity and engagement metrics</li>
+                    <li><strong>Financial Insights</strong>: Revenue and cost analysis</li>
+                    <li><strong>Geographic Analysis</strong>: Regional performance comparison</li>
+                </ol>
+            </div>
+
+            <h3>Activity 3.2: Data Storytelling</h3>
+            <div class="deliverable-box">
+                <h4>Deliverables:</h4>
+                <ul>
+                    <li>Executive presentation (maximum 10 slides)</li>
+                    <li>Infographic summary of key insights</li>
+                    <li>Written recommendations</li>
+                </ul>
+            </div>
+
+            <h4>Storytelling Requirements:</h4>
+            <ul>
+                <li>Clear narrative structure</li>
+                <li>Data-driven insights</li>
+                <li>Business impact assessment</li>
+                <li>Future recommendations</li>
+                <li>Visual design excellence</li>
+            </ul>
+
+            <div class="tech-box">
+                <h4>Suggested Tools:</h4>
+                <ul>
+                    <li><strong>Business Intelligence</strong>: Tableau, Power BI, Looker Studio</li>
+                    <li><strong>Python</strong>: Plotly, Streamlit, Dash, Bokeh</li>
+                    <li><strong>Web Technologies</strong>: D3.js, Chart.js for advanced visualizations</li>
+                    <li><strong>Design Tools</strong>: Figma, Adobe Creative Suite for infographics</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="phase-section">
+            <h2>Phase 4: Data Transformation and Integration</h2>
+            
+            <h3>Activity 4.1: ETL Pipeline Development</h3>
+            <div class="deliverable-box">
+                <h4>Deliverables:</h4>
+                <ul>
+                    <li>Automated transformation pipeline CSV ↔ JSON</li>
+                    <li>Data cleaning and validation scripts</li>
+                    <li>Incremental loading process implementation</li>
+                    <li>Comprehensive ETL process documentation</li>
+                    <li>Error handling and logging mechanisms</li>
+                </ul>
+            </div>
+
+            <div class="requirement-box">
+                <h4>Pipeline Requirements:</h4>
+                <ol>
+                    <li><strong>Extract</strong>: Multiple data source integration</li>
+                    <li><strong>Transform</strong>: Data cleaning, validation, and enrichment</li>
+                    <li><strong>Load</strong>: Efficient data loading strategies</li>
+                    <li><strong>Monitor</strong>: Pipeline monitoring and alerting</li>
+                    <li><strong>Scale</strong>: Performance optimization for large datasets</li>
+                </ol>
+            </div>
+
+            <h4>Technical Implementation:</h4>
+            <ul>
+                <li>Data validation rules</li>
+                <li>Error handling strategies</li>
+                <li>Logging and monitoring</li>
+                <li>Performance optimization</li>
+                <li>Automated scheduling</li>
+            </ul>
+
+            <div class="tech-box">
+                <h4>Suggested Technologies:</h4>
+                <ul>
+                    <li><strong>Workflow Management</strong>: Apache Airflow, Luigi, Prefect</li>
+                    <li><strong>Data Processing</strong>: Python (pandas, Apache Beam), Spark</li>
+                    <li><strong>Cloud Platforms</strong>: AWS Glue, Google Cloud Dataflow, Azure Data Factory</li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+            <h2>Portfolio Structure</h2>
+            
+            <h3>GitHub Repository (Suggested Structure):</h3>
+            <div class="folder-structure">streaming-analytics-project/
+├── README.md
+├── docs/
+│   ├── database-design.md
+│   ├── statistical-analysis.md
+│   ├── visualization-guide.md
+│   └── etl-documentation.md
+├── data/
+│   ├── raw/
+│   ├── processed/
+│   ├── schemas/
+│   └── samples/
+├── sql/
+│   ├── relational/
+│   │   ├── create_tables.sql
+│   │   ├── insert_data.sql
+│   │   └── analysis_queries.sql
+│   └── nosql/
+│       ├── mongodb_setup.js
+│       └── aggregation_pipelines.js
+├── notebooks/
+│   ├── 01_exploratory_analysis.ipynb
+│   ├── 02_statistical_testing.ipynb
+│   └── 03_predictive_modeling.ipynb
+├── dashboards/
+│   ├── streamlit_app.py
+│   ├── tableau_workbook.twbx
+│   └── assets/
+├── etl/
+│   ├── pipelines/
+│   ├── transformations/
+│   └── monitoring/
+├── presentation/
+│   ├── executive_slides.pptx
+│   ├── infographic.png
+│   └── demo_video.mp4
+├── tests/
+└── requirements.txt</div>
+
+            <h3>Required Documentation:</h3>
+            <ol>
+                <li><strong>README.md</strong> with project overview and setup instructions</li>
+                <li><strong>Technical documentation</strong> for each phase</li>
+                <li><strong>Installation and usage manual</strong></li>
+                <li><strong>Data dictionary</strong> and schema documentation</li>
+                <li><strong>Conclusions and business recommendations</strong></li>
+                <li><strong>Learning reflection</strong> and methodology justification</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2>Evaluation Criteria</h2>
+            
+            <h3>Detailed Rubric:</h3>
+            <table class="evaluation-table">
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>Excellent</th>
+                        <th>Good</th>
+                        <th>Satisfactory</th>
+                        <th>Needs Improvement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Code Quality</strong></td>
+                        <td>Clean, commented, optimized</td>
+                        <td>Well-structured, documented</td>
+                        <td>Functional, basic documentation</td>
+                        <td>Poor structure, no documentation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Technical Implementation</strong></td>
+                        <td>Advanced techniques, error handling</td>
+                        <td>Correct implementation, basic validation</td>
+                        <td>Basic functionality works</td>
+                        <td>Incomplete or incorrect</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Analysis Depth</strong></td>
+                        <td>Comprehensive insights, statistical rigor</td>
+                        <td>Good analysis, correct interpretation</td>
+                        <td>Basic analysis, some insights</td>
+                        <td>Superficial or incorrect analysis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Visualization Design</strong></td>
+                        <td>Professional, interactive, insightful</td>
+                        <td>Clear, well-designed, informative</td>
+                        <td>Basic but functional</td>
+                        <td>Poor design, unclear</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Final Deliverables</h2>
+            
+            <h3>Submission Deadline: Sept 26, 2025</h3>
+            
+            <h3>Presentation Format:</h3>
+            <ol>
+                <li><strong>Complete GitHub Repository</strong> with documentation</li>
+                <li><strong>Oral Presentation</strong> (15 minutes + 5 minutes Q&A)</li>
+                <li><strong>Live Demo</strong> of dashboard and pipeline functionality</li>
+                <li><strong>Peer Review</strong> of another team's project</li>
+            </ol>
+
+            <h3>Deployment Requirements (IF applicable):</h3>
+            <ul>
+                <li><strong>Database</strong>: AWS RDS, Google Cloud SQL, MongoDB Atlas</li>
+                <li><strong>Visualizations</strong>: Heroku, Vercel, AWS S3, Streamlit Cloud</li>
+                <li><strong>Notebooks</strong>: GitHub Pages, Binder, Google Colab</li>
+                <li><strong>Documentation</strong>: GitHub Wiki or Pages</li>
+            </ul>
+
+            <h3>Presentation Guidelines:</h3>
+            <ul>
+                <li><strong>Introduction</strong> (2 minutes): Problem definition and objectives</li>
+                <li><strong>Technical Implementation</strong> (8 minutes): Architecture and methodology</li>
+                <li><strong>Results and Insights</strong> (3 minutes): Key findings and recommendations</li>
+                <li><strong>Demo</strong> (2 minutes): Live system demonstration</li>
+                <li><strong>Q&A Session</strong> (5 minutes): Technical questions and discussion</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Additional Resources</h2>
+            
+            <h3>Supporting Datasets:</h3>
+            <ul>
+                <li><a href="https://www.kaggle.com/datasets?search=streaming">Kaggle Streaming Datasets</a></li>
+                <li><a href="https://www.kaggle.com/netflix-inc/netflix-prize-data">Netflix Prize Dataset</a></li>
+                <li><a href="https://grouplens.org/datasets/movielens/">MovieLens Dataset</a></li>
+                <li><a href="https://www.imdb.com/interfaces/">IMDb Datasets</a></li>
+            </ul>
+
+            <h3>Technical Documentation:</h3>
+            <ul>
+                <li><a href="https://www.postgresql.org/docs/">PostgreSQL Documentation</a></li>
+                <li><a href="https://docs.mongodb.com/">MongoDB Manual</a></li>
+                <li><a href="https://pandas.pydata.org/docs/">Pandas Documentation</a></li>
+                <li><a href="https://plotly.com/python/">Plotly Documentation</a></li>
+                <li><a href="https://scikit-learn.org/stable/user_guide.html">Scikit-learn User Guide</a></li>
+            </ul>
+
+            <h3>Best Practices:</h3>
+            <ul>
+                <li><a href="https://pep8.org/">PEP 8 Style Guide</a></li>
+                <li><a href="https://nvie.com/posts/a-successful-git-branching-model/">Git Flow Workflow</a></li>
+                <li><a href="https://medium.com/thedeephub/essential-principles-for-effective-data-visualization-a13f05d22c39">Data Visualization Principles</a></li>
+                <li><a href="https://www.sqlstyle.guide/">SQL Style Guide</a></li>
+                <li><a href="https://github.com/DataTalksClub/data-engineering-zoomcamp">Data Engineering Best Practices</a></li>
+            </ul>
+
+            <h3>Online Learning Resources:</h3>
+            <ul>
+                <li><a href="https://www.kaggle.com/learn">Kaggle Learn</a> - Free micro-courses</li>
+                <li><a href="https://towardsdatascience.com/">Towards Data Science</a> - Medium publication</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Collaborative Work</h2>
+            
+            <p>This practice can be completed in <strong>teams of 5 people (NO MORE, NO LESS!)</strong> with defined roles:</p>
+            <ul>
+                <li><strong>Data Engineer</strong>: Database design and ETL pipeline development</li>
+                <li><strong>Data Analyst</strong>: Statistical analysis and insight generation</li>
+                <li><strong>Data Visualization Specialist</strong>: Dashboard creation and data storytelling</li>
+            </ul>
+            
+            <p><strong>Each member must contribute to all phases but lead their area of specialization.</strong></p>
+
+            <h3>Team Collaboration Requirements:</h3>
+            <ul>
+                <li><strong>Version Control</strong>: Effective use of Git branches and pull requests</li>
+                <li><strong>Code Review</strong>: Peer review process for all major commits</li>
+                <li><strong>Documentation</strong>: Collaborative documentation using Markdown</li>
+                <li><strong>Communication</strong>: Regular stand-up meetings and progress tracking</li>
+                <li><strong>Task Management</strong>: Use of project management tools (GitHub Projects, Trello, etc.)</li>
+            </ul>
+
+            <h3>Individual Assessment Components:</h3>
+            <ul>
+                <li><strong>Git Contribution Analysis</strong>: Commit frequency and quality</li>
+                <li><strong>Code Review Participation</strong>: Quality of feedback and collaboration</li>
+                <li><strong>Peer Evaluation</strong>: Classmates and Instructor assessments (anonymous)</li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>

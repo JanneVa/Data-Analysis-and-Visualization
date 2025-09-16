@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide for Estimating AI Assistance Percentage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background-color: #55098f;
+            color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .header-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+            font-size: 14px;
+        }
+        
+        .content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #301934;
+            border-bottom: 3px solid #FFD700;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #301934;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding: 10px 0;
+            border-left: 4px solid #FFD700;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #301934;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        h4 {
+            color: #301934;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        
+        .objectives {
+            background-color: #fbeeff;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: 'Courier New', Consolas, monospace;
+            font-size: 14px;
+        }
+        
+        code {
+            background-color: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', Consolas, monospace;
+        }
+        
+        .evaluation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+        }
+        
+        .evaluation-table th {
+            background-color: #301934;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #bdc3c7;
+        }
+        
+        .evaluation-table td {
+            padding: 10px 12px;
+            border: 1px solid #bdc3c7;
+        }
+
+        .evaluation-table td strong{
+            color: #301934;
+        }
+        
+        .evaluation-table tr:nth-child(even) {
+            background-color: #fbeeff;
+        }
+        
+        .deliverable-box {
+            background-color: #e8f6f3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .requirement-box {
+            background-color: #fef9e7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .tech-box {
+            background-color: #edf2f7;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #8e44ad;
+        }
+        
+        strong {
+            color: #2c3e50;
+        }
+
+        .header-info strong {
+            color: white;
+        }
+        
+        .folder-structure {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-family: 'Courier New', Consolas, monospace;
+            font-size: 14px;
+            white-space: pre-line;
+        }
+
+        /*.phase-section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            border-left: 5px solid #FFD700;
+        }*/
+
+        .checkbox-list {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .checkbox-list li::before {
+            content: "☐ ";
+            color: #301934;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 style="color: white;">Universidad Politécnica de Yucatán</h1>
+        <div class="header-info">
+            <div><strong>Course:</strong> Visual Modeling Information</div>
+            <div><strong>Program:</strong> Data Engineering</div>
+            <div><strong>Date:</strong> Sept 5, 2025</div>
+            <div><strong>Portfolio:</strong> PU1-1</div>
+            <div><strong>Professor:</strong> Jorge J. Pedrozo Romero</div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Guide for Estimating AI Assistance Percentage</h1>
+
+        <section>
+            <h2>Estimation Methods</h2>
+
+            <h3>1. Time-Based Method</h3>
+            <p><strong>Basic calculation:</strong></p>
+            <pre>AI Assistance % = (Time with AI / Total project time) × 100</pre>
+
+            <div class="requirement-box">
+                <p><strong>Example:</strong></p>
+                <ul>
+                    <li>Total project time: 20 hours</li>
+                    <li>Time using AI: 4 hours</li>
+                    <li><strong>Estimation: 20% AI assistance</strong></li>
+                </ul>
+            </div>
+
+            <h3>2. Content/Code Lines Method</h3>
+            <p><strong>For code:</strong></p>
+            <pre>AI Assistance % = (AI-generated lines / Total lines) × 100</pre>
+
+            <p><strong>For documentation:</strong></p>
+            <pre>AI Assistance % = (AI-generated words / Total words) × 100</pre>
+
+            <div class="requirement-box">
+                <p><strong>Example:</strong></p>
+                <ul>
+                    <li>Total code: 500 lines</li>
+                    <li>AI-generated code: 150 lines</li>
+                    <li><strong>Estimation: 30% AI assistance</strong></li>
+                </ul>
+            </div>
+
+            <h3>3. Project Components Method</h3>
+            <table class="evaluation-table">
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Weight</th>
+                        <th>AI Assistance</th>
+                        <th>Contribution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data analysis</td>
+                        <td>30%</td>
+                        <td>10%</td>
+                        <td>3%</td>
+                    </tr>
+                    <tr>
+                        <td>SQL code</td>
+                        <td>25%</td>
+                        <td>60%</td>
+                        <td>15%</td>
+                    </tr>
+                    <tr>
+                        <td>Visualizations</td>
+                        <td>20%</td>
+                        <td>20%</td>
+                        <td>4%</td>
+                    </tr>
+                    <tr>
+                        <td>Documentation</td>
+                        <td>15%</td>
+                        <td>40%</td>
+                        <td>6%</td>
+                    </tr>
+                    <tr>
+                        <td>Presentation</td>
+                        <td>10%</td>
+                        <td>80%</td>
+                        <td>8%</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong>100%</strong></td>
+                        <td>-</td>
+                        <td><strong>36%</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <div class="phase-section">
+            <h2>Assistance Levels by Activity</h2>
+
+            <h3>Level 1: Minimal Assistance (0-20%)</h3>
+            <ul>
+                <li><strong>Information lookup:</strong> Syntax verification, documentation</li>
+                <li><strong>Debugging:</strong> Simple error identification</li>
+                <li><strong>Formatting:</strong> Style correction, indentation</li>
+            </ul>
+
+            <div class="tech-box">
+                <p><strong>Examples:</strong></p>
+                <ul>
+                    <li>"How do you write a function in Python?"</li>
+                    <li>"What's the correct syntax for a JOIN in SQL?"</li>
+                </ul>
+            </div>
+
+            <h3>Level 2: Moderate Assistance (21-50%)</h3>
+            <ul>
+                <li><strong>Base code generation:</strong> Basic structures, templates</li>
+                <li><strong>Guided analysis:</strong> Methodological approach suggestions</li>
+                <li><strong>Content review:</strong> Improvements to existing documentation</li>
+            </ul>
+
+            <div class="tech-box">
+                <p><strong>Examples:</strong></p>
+                <ul>
+                    <li>Generate function skeleton</li>
+                    <li>Suggest appropriate libraries for analysis</li>
+                    <li>Review and improve code comments</li>
+                </ul>
+            </div>
+
+            <h3>Level 3: Significant Assistance (51-80%)</h3>
+            <ul>
+                <li><strong>Algorithm development:</strong> Complete implementation with human review</li>
+                <li><strong>Data analysis:</strong> Statistical analysis script generation</li>
+                <li><strong>Content creation:</strong> Complete section writing</li>
+            </ul>
+
+            <div class="tech-box">
+                <p><strong>Examples:</strong></p>
+                <ul>
+                    <li>Implement complete clustering algorithm</li>
+                    <li>Generate exploratory data analysis</li>
+                    <li>Create complex visualizations</li>
+                </ul>
+            </div>
+
+            <h3>Level 4: Extensive Assistance (81-100%)</h3>
+            <ul>
+                <li><strong>Automatic generation:</strong> Content generated almost entirely by AI</li>
+                <li><strong>Complete implementation:</strong> End-to-end solutions</li>
+                <li><strong>Automatic writing:</strong> Auto-generated technical documentation</li>
+            </ul>
+
+            <div class="tech-box">
+                <p><strong>Examples:</strong></p>
+                <ul>
+                    <li>Complete AI-generated dashboard</li>
+                    <li>Complete technical documentation</li>
+                    <li>Automatically generated presentation</li>
+                </ul>
+            </div>
+        </div>
+
+        <section>
+            <h2>Self-Assessment Framework</h2>
+
+            <h3>Guiding Questions for Students</h3>
+
+            <div class="deliverable-box">
+                <h4>1. Initiative and Conceptualization (Who defined WHAT to do?)</h4>
+                <ul class="checkbox-list">
+                    <li>I completely defined the problem and approach (0 - 25%)</li>
+                    <li>AI helped me refine my initial idea (26 - 50%)</li>
+                    <li>AI suggested the main approach (51 - 75%)</li>
+                    <li>AI completely defined the solution (76 - 100%)</li>
+                </ul>
+            </div>
+
+            <div class="deliverable-box">
+                <h4>2. Implementation (Who did the technical work?)</h4>
+                <ul class="checkbox-list">
+                    <li>I wrote all code/content from scratch (0 - 25%)</li>
+                    <li>AI gave me structure/templates that I completed (26 - 50%)</li>
+                    <li>AI generated code that I significantly modified (51 - 75%)</li>
+                    <li>AI generated most content with minimal modification (76 - 100%)</li>
+                </ul>
+            </div>
+
+            <div class="deliverable-box">
+                <h4>3. Understanding and Validation (Do you understand what you did?)</h4>
+                <ul class="checkbox-list">
+                    <li>I understand and can explain every line/concept (0 - 25%)</li>
+                    <li>I understand general concepts but not all details (26 - 50%)</li>
+                    <li>I understand the result but not the complete process (51 - 75%)</li>
+                    <li>I don't fully understand how it works (76 - 100%)</li>
+                </ul>
+            </div>
+
+            <div class="deliverable-box">
+                <h4>4. Problem Solving (Who solved the errors?)</h4>
+                <ul class="checkbox-list">
+                    <li>I identified and resolved all problems (0 - 25%)</li>
+                    <li>AI helped me identify problems that I solved (26 - 50%)</li>
+                    <li>AI solved problems that I identified (51 - 75%)</li>
+                    <li>AI identified and solved most problems (76 - 100%)</li>
+                </ul>
+            </div>
+            
+			<h3>Formula:</h3>
+            <pre>Self-Assessment Score = (Q1 + Q2 + Q3 + Q4) / 4</pre>
+        </section>
+
+        <section>
+            <h2>AI Usage Log Template</h2>
+
+            <h3>For each work session:</h3>
+
+            <div class="folder-structure">## Session [Date]
+
+**Duration:** [X hours]
+**Objectives:** [What you wanted to accomplish]
+
+### AI Usage:
+- **Tool:** [Claude, ChatGPT, etc.]
+- **Time with AI:** [X minutes/hours]
+- **Prompts used:** [Approximate number]
+- **Type of assistance:**
+  - [ ] Code generation
+  - [ ] Debugging
+  - [ ] Concept explanation
+  - [ ] Content review
+  - [ ] Data analysis
+  - [ ] Documentation
+
+### Results:
+- **Generated by AI:** [Description]
+- **Modified by me:** [What changes you made]
+- **Created by me:** [What you did without AI]
+
+### Assistance estimation for this session: [X%]</div>
+			<p><strong>BEST PRACTICE</strong>: Commit regularly and document session details in commit messages</p>
+        </section>
+
+        <section>
+            <h2>Suggested Final Calculation</h2>
+
+            <h3>Combined Formula:</h3>
+            <pre>Final AI Assistance % = (0.25 × Time %) + (0.35 × Content %) + (0.25 × Complexity %) + (0.15 × Self-Assessment Score)</pre>
+
+            <div class="tech-box">
+                <p><strong>Where:</strong></p>
+                <ul>
+                    <li><strong>Time %:</strong> Proportion of time using AI</li>
+                    <li><strong>Content %:</strong> Proportion of content generated by AI</li>
+                    <li><strong>Complexity %:</strong> Complexity level of tasks performed by AI</li>
+                    <li><strong>Self-Assessment Score:</strong> Based on the Self-Assessment Framework</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Practical Examples</h2>
+
+            <div class="requirement-box">
+                <h3>Example: Database Project</h3>
+                <div class="folder-structure">Activity: Relational database design
+Time % = (6 / 20) × 100 = 30%
+Time Contribution = 0.25 × 30% = 7.5%
+
+Content % = (200 / 500) × 100 = 40%
+Content Contribution = 0.35 × 40% = 14%
+
+Complexity Score = 62.5% (Significant level)
+Complexity Contribution = 0.25 × 62.5% = 15.625%
+
+Self-Assessment Score = (25 + 75 + 25 + 25) / 4 = 37.5%
+Self-Assessment Contribution = 0.15 × 37.5% = 5.625%
+
+Final AI Assistance % = 7.5% + 14% + 15.625% + 5.625% = 42.75%</div>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Recommendations for Professors</h2>
+
+            <h3>1. Establish Acceptable Ranges</h3>
+            <ul>
+                <li><strong>Learning projects:</strong> 0-30% recommended</li>
+                <li><strong>Intermediate projects:</strong> 31-60% acceptable</li>
+                <li><strong>Advanced projects:</strong> 61-80% with justification</li>
+                <li><strong>Research projects:</strong> Variable according to objectives</li>
+            </ul>
+
+            <h3>2. Require Evidence</h3>
+            <ul>
+                <li>Git control version or similar</li>
+                <li>AI conversation history</li>
+                <li>Detailed time log</li>
+                <li>Explanation of modifications made</li>
+            </ul>
+
+            <h3>3. Complementary Assessment</h3>
+            <ul>
+                <li>Oral exams about the project</li>
+                <li>Specific technical questions</li>
+                <li>Request live modifications</li>
+                <li>Peer review among students</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Documentation Standards</h2>
+
+            <h3>Required AI Disclosure Elements</h3>
+
+            <div class="deliverable-box">
+                <h4>Basic Template:</h4>
+                <div class="folder-structure">## AI Assistance Disclosure
+
+- **AI Tool Used:** [Specific tool name and version]
+- **Overall Assistance Level:** [X%] 
+- **Primary Use Cases:** 
+  - [e.g., Code generation: 60%]
+  - [e.g., Documentation: 40%]
+  - [e.g., Debugging: 20%]
+- **Human Contributions:**
+  - [Specific tasks you completed independently]
+  - [Modifications made to AI-generated content]
+  - [Original analysis and insights]
+- **Verification Process:** [How you validated AI outputs]</div>
+            </div>
+
+            <h3>Assessment Rubric for AI Usage</h3>
+
+            <table class="evaluation-table">
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>Excellent</th>
+                        <th>Good</th>
+                        <th>Satisfactory</th>
+                        <th>Needs Improvement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Transparency</strong></td>
+                        <td>Complete disclosure with evidence</td>
+                        <td>Clear disclosure, minor gaps</td>
+                        <td>Basic disclosure</td>
+                        <td>Incomplete/unclear</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Understanding</strong></td>
+                        <td>Can explain all AI-generated content</td>
+                        <td>Understands most content</td>
+                        <td>Basic understanding</td>
+                        <td>Limited understanding</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Human Value-Add</strong></td>
+                        <td>Significant original contribution</td>
+                        <td>Good personal insights</td>
+                        <td>Some original work</td>
+                        <td>Minimal personal input</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Appropriate Use</strong></td>
+                        <td>AI used strategically for learning</td>
+                        <td>Good balance of AI/human work</td>
+                        <td>Acceptable AI reliance</td>
+                        <td>Over-reliance on AI</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Red Flags</h3>
+
+            <div class="requirement-box">
+                <h4>Indicators of excessive AI dependence:</h4>
+                <ul>
+                    <li>Student cannot explain basic concepts in their project</li>
+                    <li>Code/content has inconsistent style or approach</li>
+                    <li>Student struggles to make simple modifications</li>
+                    <li>Documentation is too polished relative to code quality</li>
+                    <li>Student cannot debug simple errors independently</li>
+                </ul>
+            </div>
+
+            <h3>Best Practices for Students</h3>
+
+            <div class="deliverable-box">
+                <h4>DO:</h4>
+                <ul>
+                    <li>Keep detailed logs of AI interactions</li>
+                    <li>Always test and verify AI-generated code</li>
+                    <li>Add personal insights and analysis</li>
+                    <li>Modify AI content to match your style</li>
+                    <li>Ask follow-up questions to understand concepts</li>
+                </ul>
+            </div>
+
+            <div class="requirement-box">
+                <h4>DON'T:</h4>
+                <ul>
+                    <li>Copy-paste AI output without understanding</li>
+                    <li>Use AI for concepts you should learn manually</li>
+                    <li>Hide or minimize AI usage</li>
+                    <li>Submit AI content as completely original work</li>
+                    <li>Rely on AI for fundamental course concepts</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

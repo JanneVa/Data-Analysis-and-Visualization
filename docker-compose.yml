@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: video_streaming_postgres
+    environment:
+      POSTGRES_DB: video_streaming_platform
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./video-streaming-analysis/database/sql:/docker-entrypoint-initdb.d
+    networks:
+      - streaming_network
+
+  mongodb:
+    image: mongo:7
+    container_name: video_streaming_mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+      MONGO_INITDB_DATABASE: video_streaming_platform
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - streaming_network
+
+volumes:
+  postgres_data:
+  mongodb_data:
+
+networks:
+  streaming_network:
+    driver: bridge
