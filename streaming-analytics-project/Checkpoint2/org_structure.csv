@@ -1,0 +1,33 @@
+labels,parents,values
+Engineering,Company,180
+Product,Company,80
+Sales,Company,120
+Operations,Company,120
+Backend,Engineering,60
+Frontend,Engineering,50
+Mobile,Engineering,40
+DevOps,Engineering,30
+Design,Product,30
+Product Management,Product,25
+Analytics,Product,25
+Enterprise,Sales,50
+SMB,Sales,40
+Partnerships,Sales,30
+HR,Operations,40
+Finance,Operations,35
+Legal,Operations,25
+IT,Operations,20
+Backend-Team1,Backend,30
+Backend-Team2,Backend,30
+Frontend-Team1,Frontend,25
+Frontend-Team2,Frontend,25
+Mobile-iOS,Mobile,20
+Mobile-Android,Mobile,20
+DevOps-Cloud,DevOps,15
+DevOps-Security,DevOps,15
+UI/UX,Design,15
+Research,Design,15
+PM-Core,Product Management,12
+PM-Growth,Product Management,13
+Data-Science,Analytics,13
+BI,Analytics,12
